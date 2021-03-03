@@ -10,7 +10,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    if: (contains.(github.event.comment.body, '/runtest'))
     steps:
     - name: print
       run: echo "HELLO there"
